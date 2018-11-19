@@ -1,6 +1,0 @@
-練習：
-https://projecteuler.net/about
-
-
-
-MATLABだけを使える。

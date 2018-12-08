@@ -23,7 +23,7 @@ void loop() {
 
 //コードがいいです。次は他の方法です。次回にしてみてください。
 
-  analogWrite(led, brightness);
+  analogWrite(6, brightness);
 
   // change the brightness for next time through the loop:
   brightness = brightness + fadeAmount;

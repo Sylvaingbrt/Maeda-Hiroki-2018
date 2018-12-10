@@ -1,39 +1,38 @@
 void upscale(){
   
   tone(13,131,100);
-  delay(100);
-  delay(100);
+  delay(1000);
   tone(13,147,100);
-  delay(100);
+  delay(1000);
   tone(13,165,100);
-  delay(100);
+  delay(1000);
   tone(13,175,100);
-  delay(100);
+  delay(1000);
   tone(13,196,100);
-  delay(100);
+  delay(1000);
   tone(13,220,100);
-  delay(100);
+  delay(1000);
   tone(13,247,100);
-  delay(100);
+  delay(1000);
   tone(13,262,100);
   
   }
 void downscale(){
   
   tone(13,262,100);
-  delay(100);
+  delay(1000);
   tone(13,247,100);
-  delay(100);
+  delay(1000);
   tone(13,220,100);
-  delay(100);
+  delay(1000);
   tone(13,196,100);
-  delay(100);
+  delay(1000);
   tone(13,175,100);
-  delay(100);
+  delay(1000);
   tone(13,165,100);
-  delay(100);
+  delay(1000);
   tone(13,147,100);
-  delay(100);
+  delay(1000);
   tone(13,131,100);
   }
   int mode;
@@ -50,16 +49,18 @@ void setup() {
 void loop() {
   state = digitalRead(7);
   Serial.println(mode+state);
-  if(mode == 0){
+    if(mode==0){
+    }else if(mode == 1){
     upscale();
     }else{
       downscale();
      }
       if(state==1){
-        if(mode==1){
+        if(mode==2){
           mode=0;
+          delay(1000);
           }else{
-            mode=1;
+            mode=mode + 1;
             }
         }
   // put your main code here, to run repeatedly:

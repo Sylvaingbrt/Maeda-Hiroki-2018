@@ -26,9 +26,9 @@ function myserial = arduino_serCom(serialCOM,serialProperty,serialValue)
         %serial('port','PropertyName',PropertyValue,...);
         myserial = serial(serialCOM, serialProperty,serialValue);
         fprintf('cccccccccccccccc\n');
-        out1 = instrfind(myserial);
-        clear myserial
-        myserial = instrfind;
+       % out1 = instrfind(myserial);
+       % clear myserial
+        %myserial = instrfind;
         fopen(myserial);
         
         fprintf('cccccccccccccccc\n');

@@ -11,20 +11,18 @@ con = 0;
 lastCon = 0;
 while cir ==1
     if strcmp(get(hf,'currentcharacter'),'1')
-        con = 1;
+        con = 1; %"LED";
     elseif strcmp(get(hf,'currentcharacter'),'2')
-        con = 2;
-    elseif strcmp(get(hf,'currentcharacter'),'3')
-        con = 3;
+        con = 2;%"buzzer";
     elseif strcmp(get(hf,'currentcharacter'),'0')
         con = 0;
         cir = 0;
     end
-    if con~=lastCon
+   % if strcmp(con,lastCon)
         fprintf(myserial,'%d',con);
-        disp(con);
+        %disp(con);
         lastCon = con ;
-    end
+    %end
    % fprintf(myserial,'%d',con);
    figure(hf)
    drawnow

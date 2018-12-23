@@ -16,16 +16,16 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-         delay(10);
+         delay(1000);
          SA = Serial.available();
          if(SA>0){
             inByte = Serial.read();
-
             switch(inByte){
               case 48:
                 digitalWrite(2,LOW);
                 digitalWrite(4,LOW);
                 digitalWrite(6,LOW);
+                break;
               case 49:
                 digitalWrite(2,HIGH);
                 digitalWrite(4,LOW);
@@ -40,6 +40,7 @@ void loop() {
                 digitalWrite(2,LOW);
                 digitalWrite(4,LOW);
                 digitalWrite(6,HIGH);
+                break;
               }
             
           }

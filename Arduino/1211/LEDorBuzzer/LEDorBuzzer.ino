@@ -19,7 +19,7 @@ void upscale(int hz[]){//upscale
   }
 void downscale(int hz[]){ // downscale
   count = 0;
-  while(hz[count]!='\0'){}
+  while(hz[count]!='\0'){count++;}
   for(i=count;i>=0;i--){
     buzzer(hz[i]);
     }
@@ -55,10 +55,10 @@ void setup() {
   // put your setup code here, to run once:
  pinMode(2,OUTPUT);
  pinMode(4,INPUT);
- pinMode(0,OUTPUT);
+ pinMode(6,OUTPUT);
 // pinMode(8,OUTPUT);
  //digitalWrite(8,LOW);
- digitalWrite(0,HIGH);
+ digitalWrite(6,HIGH);
  Serial.begin(9600);
  while(!Serial){//serial準備
   }

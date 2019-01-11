@@ -18,11 +18,11 @@ while cir ==1
         con = 0;
         cir = 0;
     end
-   % if strcmp(con,lastCon)
+    if con~=lastCon
         fprintf(myserial,'%d',con);
-        %disp(con);
+        disp(con);
         lastCon = con ;
-    %end
+    end
    % fprintf(myserial,'%d',con);
    figure(hf)
    drawnow

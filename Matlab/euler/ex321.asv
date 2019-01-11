@@ -1,5 +1,5 @@
 num =0;
-i = 0;
+i = 1;
 sumAns=0;
 count = 1;
 x=0;
@@ -21,7 +21,7 @@ boostnum=0;
 boostx=0;
 %}
 temp = 0;
-while i <= 40
+while i <= 5
     %{
     %*******************************************************************
     boostnum3 = (((10*boost3*boostcount3*2+1)+3)*5*boost3*boostcount3);
@@ -85,24 +85,21 @@ while i <= 40
     %fprintf("%d\n",num);
    %if 1==triangle_number(num)
     %while (try_i)^2 <= num*2
-       % x= round(sqrt(2*num));
-        count = -1+sqrt(1+num);
-            if num == (4+2*count)*count/2&&count==round(count)
-                %count = -1+sqrt(1+num);
+        x= round(sqrt(2*num));
+            if 2*num == x*(x+1)
+                count = 
                 sumAns = sumAns + count;
-                fprintf("i = %d, count = %d, num = %d\n",i, count, num);
+                fprintf("x = %d, count = %d, num = %d\n",x, count, num);
                 
                 i=i+1;
                 
                 %x=x+1;
-                %x=count*temp;
-               %{
+                x=count*temp;
                 if temp ==3
                     temp=2;
                 else
                     temp=3;
                 end
-                %}
                % boostcount=boostcount + 1;
             elseif 2*num >x*(x+1)
       %          boostcount3=boostcount3+1;
@@ -115,8 +112,8 @@ while i <= 40
           %    boostx3=x;
            % end
   
-    temp = temp + 1;
+    count = count + 1;
 end
-fprintf("sum = %d\n",sumAns);
+fprintf("%d\n",sumAns);
     
 
